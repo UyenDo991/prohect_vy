@@ -114,7 +114,7 @@ class microParticle {
 
   move() {
     this.x -=
-      Math.sin(this.progress / (500 / (this.random1 - this.random2 * 50))) *
+      Math.sin(this.progress / (1000 / (this.random1 - this.random2 * 50))) *
       this.s;
     this.y += Math.cos(this.progress / this.h) * this.s;
 

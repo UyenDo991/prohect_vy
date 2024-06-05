@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thảo Uyên - NTKK</title>
+    <style>
+        body { background: #002d81; }
+        .btn-animation-cha {
+            width: 150px;
+            height: 80px;
+            border-radius: 10%;
+            background: #0cdda9;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            margin: 0 auto;
+            position: relative;
+            text-decoration: none;
+        }
+        .btn-animation {
+            border-radius: 10%;
+            display: block;
+            /* text-align: center; */
+            line-height: 50px;
+            margin: 0 auto;
+            position: absolute;
+            text-decoration: none;
+            top: 20%;
+            left: 20%;
+        }
+        .btn-animation::before, 
+        .btn-animation::after {
+            content: '';
+            background: #fff;
+            border-radius: 70%;
+            border-style: double;
+            border: 5px green solid;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            animation: glow 1s infinite linear;
+        }
+        .btn-animation::after { animation-delay: .5s; }
+        .btn-animation-cha:hover { 
+            animation: click 1s infinite linear;
+        }
+
+        @keyframes glow {
+            0%   { transform: scale(0.1); opacity: .7;}
+            100% { transform: scale(2.5); opacity: 0;}
+            
+        }
+        @keyframes click {
+            0%   { transform: translateY(0);}
+            100% { transform: translateY(0px); }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ea minima, libero ipsum ducimus necessitatibus voluptatum provident blanditiis qui adipisci perspiciatis! Cupiditate harum recusandae magni ipsam culpa a sit alias?
+    </p>
+    <div class="btn-animation-cha">
+        <a href="#" class="btn-animation">Add to card</a>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quia dolores quae veritatis minus nam id earum, ut, cumque, saepe voluptatum praesentium consequuntur unde deserunt mollitia nisi doloribus similique incidunt.
+    </p>
+</body>
+</html>
